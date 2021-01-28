@@ -1,0 +1,116 @@
+html{
+	box-sizing: border-box;
+}
+
+*::before,
+*::after,
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.unsel{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: "Roboto", sans-serif;
+	width: 100vw;
+	height: 100vh;
+	background:linear-gradient(to right, magenta, blue);
+	color: gold;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 5px;
+	width: 300px;
+	height: 350px;
+}
+
+label{
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+label span{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+label span:last-child{
+	margin-left: 20px;
+}
+
+.controller{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10px;
+	width: 30px;
+	height: 30px;
+	border:solid 1px black;
+	border-radius: 5px;
+}
+
+img{
+	display: none;
+	border:solid 0.0000001px transparent;
+}
+
+input:checked + .controller img{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+
+.reset, .submit{
+	display: inline-block;
+	background-color: transparent;
+	color: pink;
+	outline: none;
+	padding: 3px 5px;
+	font-size: 16px;
+	border:0.00000001px solid transparent;
+	border-bottom: 0.5px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.reset:hover,.submit:hover{
+	background-color: rgba(0,0,0,0.1);
+	
+}
+
+.reset:active,.submit:active{
+	background-color: rgba(0,0,0,0.6);
+}
+
+.button{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
